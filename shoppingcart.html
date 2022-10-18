@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+        .section-header {
+            padding-bottom: 2rem;
+    text-align: center;
+    font-size: 4.5rem;
+    color:var(--black);
+}
+.section-header span{
+    position: relative;
+    z-index: 0;
+}
+.content-section {
+    padding:1rem;
+    padding-bottom: 4rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    font-size: 2.2rem;
+    color:var(--black);
+}
+
+.shop-item-image {
+    height: 15rem;
+}
+.shop-item-image:hover{
+    transform: scale(.9);
+}
+
+.shop-item-details .shop-item-button{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.shop-item-price {
+    font-size: 2.5rem;
+    color:var(--black);
+}
+.shop-item-button{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.shop-item-button:hover{
+    background:var(--yellow);
+}
+
+.shop-items {
+    padding:2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* .btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+} */
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #f9d806;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+.btn-danger {
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+section{
+    padding:2rem 9%;
+}
+    </style>
+
+</head>
+<body>
+    
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="./index.html" class="logo"> <span>max</span>wheels </a>
+
+    <nav class="navbar">
+        <a href="./index.html">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">featured</a>
+        <a href="#contact">contact</a>
+        <a href="./gioithieu.html">Introduce</a>
+        <a href="./sitemap.html">SiteMap</a>
+    </nav>
+
+    <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div id="login-btn">
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header> 
+    
+<div class="login-form-container">
+
+    <span id="close-login-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>user login</h3>
+        <input type="email" placeholder="email" class="box">
+        <input type="password" placeholder="password" class="box">
+        <p> forget your password <a href="#">click here</a> </p>
+        <div class="buttons">
+            <a href="./index.html" class="btn">Login</a>
+        </div>
+        <p>don't have an account</p>
+        <div class="buttons">
+            <a href="./dangky.html" class="btn">Sign up </a>
+        </div>
+    </form>
+
+</div>
+
+<section class="home" id="home">
+
+    <h3 data-speed="-2" class="home-parallax">find your car</h3>
+
+    <!-- <img data-speed="5" class="home-parallax" src="image/home-img.png" alt="">
+
+    <a data-speed="7" href="#" class="btn home-parallax">explore cars</a> -->
+
+</section>
+
+<section class="container content-section" 
+            style="width:100%;
+            border-radius: .5rem;
+            padding:1rem 1.2rem;
+            font-size: 1.6rem;
+            text-transform: none;
+            border:var(--border);
+            margin:auto;">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">Item type</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+    </div>
+    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+</section>
+
+
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>All</span> vehicles </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/car-1.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">MERCEDES C CABRIOLET</h3>
+                     <div class="shop-item-price">$120,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/car-2.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">MG ZS 2021</h3>
+                     <div class="shop-item-price">$57,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/car-3.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">KIA Rondo</h3>
+                     <div class="shop-item-price">$55,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/car-4.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Audi Q3</h3>
+                     <div class="shop-item-price">$100,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+ 
+     <div class="swiper featured-slider">
+ 
+         <div class="swiper-wrapper">
+  
+              <div class="swiper-slide box">
+                  <img class="shop-item-image" src="image/car-5.png" alt="">
+                  <div class="shop-item-details">
+                      <h3 class="shop-item-title">KIA K5</h3>
+                      <div class="shop-item-price">$60,000/-</div>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+  
+              <div class="swiper-slide box">
+                  <img class="shop-item-image" src="image/car-6.png" alt="">
+                  <div class="shop-item-details">
+                      <h3 class="shop-item-title">Honda Accord</h3>
+                      <div class="shop-item-price">$80,000/-</div>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+  
+              <div class="swiper-slide box">
+                  <img class="shop-item-image" src="image/car-7.png" alt="">
+                  <div class="shop-item-details">
+                      <h3 class="shop-item-title">KIA Sorento</h3>
+                      <div class="shop-item-price">$75,000/-</div>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+  
+              <div class="swiper-slide box">
+                  <img class="shop-item-image" src="image/car-8.png" alt="">
+                  <div class="shop-item-details">
+                      <h3 class="shop-item-title">Chevrolet Captiva</h3>
+                      <div class="shop-item-price">$50,000/-</div>
+                      <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  </div>
+              </div>
+  
+         </div>
+  
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+     <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/vehicle-1.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Ferrari SF90 Stradale</h3>
+                     <div class="shop-item-price">$600,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/vehicle-2.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Ferrari 812 GTS</h3>
+                     <div class="shop-item-price">$364,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/vehicle-3.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Ferrari 488GTB</h3>
+                     <div class="shop-item-price">$257,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+     <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/vehicle-4.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Ferrari F12 Berlinetta</h3>
+                     <div class="shop-item-price">$324,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/vehicle-5.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Ferrari Portofino</h3>
+                     <div class="shop-item-price">$240,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img class="shop-item-image" src="image/vehicle-6.png" alt="">
+                 <div class="shop-item-details">
+                     <h3 class="shop-item-title">Ferrari GTC4Lusso</h3>
+                     <div class="shop-item-price">$303,000/-</div>
+                     <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+
+</section>
+
+
+
+
+<h2 class="section-header"><span>Ferrari</span></h2>
+<section class="swiper container content-section">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide shop-items">
+            <div class="shop-item">
+                <img class="shop-item-image" src="/image/vehicle-1.png">
+                <h3 class="shop-item-title">Ferrari SF90 Stradale</h3>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$600,000/-</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide shop-items">
+            <div class="shop-item">
+                <img class="shop-item-image" src="/image/vehicle-2.png">
+                <h3 class="shop-item-title">Ferrari 812 GTS</h3>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$364,000/-</span>
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide shop-items">
+            <div class="shop-item">
+                <img class="shop-item-image" src="/image/vehicle-3.png">
+                <h3 class="shop-item-title">Ferrari 488GTB</h3>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$257,000/-</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide shop-items">
+            <div class="shop-item">
+                <img class="shop-item-image" src="/image/vehicle-4.png">
+                <h3 class="shop-item-title">Ferrari F12 Berlinetta</h3>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$324,000/-</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide shop-items">
+            <div class="shop-item">
+                <img class="shop-item-image" src="/image/vehicle-5.png">
+                <h3 class="shop-item-title">Ferrari Portofino</h3>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$240,000/-</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide shop-items">
+            <div class="shop-item">
+                <img class="shop-item-image" src="/image/vehicle-6.png">
+                <h3 class="shop-item-title">Ferrari GTC4Lusso</h3>
+                <div class="shop-item-details">
+                    <span class="shop-item-price">$303,000/-</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+</section>
+
+<h2 class="section-header"><span>Mercedes / Audi / MG</span></h2>
+<section class="container content-section">
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-1.png">
+            <h3 class="shop-item-title">MERCEDES C CABRIOLET</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$120,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-2.png">
+            <h3 class="shop-item-title">MG ZS 2021</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$57,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-3.png">
+            <h3 class="shop-item-title">KIA Rondo</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$55,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-4.png">
+            <h3 class="shop-item-title">Audi Q3</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$100,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<h2 class="section-header"><span>KIA / Honda / Chevrolet</span></h2>
+<section class="container content-section">
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-5.png">
+            <h3 class="shop-item-title">KIA K5</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$60,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-6.png">
+            <h3 class="shop-item-title">Honda Accord</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$80,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-7.png">
+            <h3 class="shop-item-title">KIA Sorento</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$75,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop-items">
+        <div class="shop-item">
+            <img class="shop-item-image" src="/image/car-8.png">
+            <h3 class="shop-item-title">Chevrolet Captiva</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$50,000/-</span>
+                <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</section> <br><br><br><br>
+
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> vehicles </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> ducnhan055@gmail.com </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="https://github.com/ducnhancr21"> <i class="fab fa-github"></i> github </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by Hồ Đức Nhân | MSSV: 20117051 </div>
+    
+
+</section>
+
+<!-- -------------------------------------------------------------------------------- -->
+
+<script>
+    if (document.readyState == 'loading') {
+document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
+
+function ready() {
+var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+for (var i = 0; i < removeCartItemButtons.length; i++) {
+    var button = removeCartItemButtons[i]
+    button.addEventListener('click', removeCartItem)
+}
+
+var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+for (var i = 0; i < quantityInputs.length; i++) {
+    var input = quantityInputs[i]
+    input.addEventListener('change', quantityChanged)
+}
+
+var addToCartButtons = document.getElementsByClassName('shop-item-button')
+for (var i = 0; i < addToCartButtons.length; i++) {
+    var button = addToCartButtons[i]
+    button.addEventListener('click', addToCartClicked)
+}
+
+document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+}
+
+function purchaseClicked() {
+alert('Thank you for your purchase')
+var cartItems = document.getElementsByClassName('cart-items')[0]
+while (cartItems.hasChildNodes()) {
+    cartItems.removeChild(cartItems.firstChild)
+}
+updateCartTotal()
+}
+
+function removeCartItem(event) {
+var buttonClicked = event.target
+buttonClicked.parentElement.parentElement.remove()
+updateCartTotal()
+}
+
+function quantityChanged(event) {
+var input = event.target
+if (isNaN(input.value) || input.value <= 0) {
+    input.value = 1
+}
+updateCartTotal()
+}
+
+function addToCartClicked(event) {
+var button = event.target
+var shopItem = button.parentElement.parentElement
+var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+addItemToCart(title, price, imageSrc)
+updateCartTotal()
+}
+
+function addItemToCart(title, price, imageSrc) {
+var cartRow = document.createElement('div')
+cartRow.classList.add('cart-row')
+var cartItems = document.getElementsByClassName('cart-items')[0]
+var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+for (var i = 0; i < cartItemNames.length; i++) {
+    if (cartItemNames[i].innerText == title) {
+        alert('This item is already added to the cart')
+        return
+    }
+}
+var cartRowContents = `
+    <div class="cart-item cart-column">
+        <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+        <span class="cart-item-title">${title}</span>
+    </div>
+    <span class="cart-price cart-column">${price}</span>
+    <div class="cart-quantity cart-column">
+        <input class="cart-quantity-input" type="number" value="1">
+        <button class="btn btn-danger" type="button">REMOVE</button>
+    </div>`
+cartRow.innerHTML = cartRowContents
+cartItems.append(cartRow)
+cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+}
+
+function updateCartTotal() {
+var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+var total = 0
+for (var i = 0; i < cartRows.length; i++) {
+    var cartRow = cartRows[i]
+    var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+    var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+    var price = parseFloat(priceElement.innerText.replace('$', ''))
+    var quantity = quantityElement.value
+    total = total + (price * quantity)
+}
+total = Math.round(total * 1000)
+document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+
+var swiper = new Swiper(".content-section", {
+  grabCursor: true,
+  centeredSlides: true,  
+  spaceBetween: 20,
+  loop:true,
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable:true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

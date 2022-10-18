@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="./index.html" class="logo"> <span>max</span>wheels </a>
+
+    <nav class="navbar">
+        <a href="./index.html">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">featured</a>
+        <a href="#contact">contact</a>
+        <a href="./gioithieu.html">Introduce</a>
+        <a href="./sitemap.html">SiteMap</a>
+    </nav>
+
+    <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="./shoppingcart.html" class="fas fa-shopping-cart"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div id="login-btn">
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header> 
+    
+<div class="login-form-container">
+
+    <span id="close-login-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>user login</h3>
+        <input type="email" placeholder="email" class="box">
+        <input type="password" placeholder="password" class="box">
+        <p> forget your password <a href="#">click here</a> </p>
+        <div class="buttons">
+            <a href="./index.html" class="btn">Login</a>
+        </div>
+        <p>don't have an account</p>
+        <div class="buttons">
+            <a href="./dangky.html" class="btn">Sign up </a>
+        </div>
+    </form>
+
+</div>
+
+<section class="home" id="home">
+
+    <h3 data-speed="-2" class="home-parallax">find your car</h3>
+
+    <!-- <img data-speed="5" class="home-parallax" src="image/home-img.png" alt="">
+
+    <a data-speed="7" href="#" class="btn home-parallax">explore cars</a> -->
+
+</section>
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>All</span> vehicles </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-1.png" alt="">
+                 <div class="content">
+                     <h3>MERCEDES C CABRIOLET</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$120,000/-</div>
+                     <a href="./chitiet2.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-2.png" alt="">
+                 <div class="content">
+                     <h3>MG ZS 2021</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$57,000/-</div>
+                     <a href="./chitiet2.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-3.png" alt="">
+                 <div class="content">
+                     <h3>KIA Rondo</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$55,000/-</div>
+                     <a href="./chitiet2.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-4.png" alt="">
+                 <div class="content">
+                     <h3>Audi Q3</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$100,000/-</div>
+                     <a href="./chitiet2.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+ 
+     <div class="swiper featured-slider">
+ 
+         <div class="swiper-wrapper">
+  
+              <div class="swiper-slide box">
+                  <img src="image/car-5.png" alt="">
+                  <div class="content">
+                      <h3>KIA K5</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="price">$60,000/-</div>
+                      <a href="./chitiet3.html" class="btn">check out</a>
+                  </div>
+              </div>
+  
+              <div class="swiper-slide box">
+                  <img src="image/car-6.png" alt="">
+                  <div class="content">
+                      <h3>Honda Accord</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="price">$80,000/-</div>
+                      <a href="./chitiet3.html" class="btn">check out</a>
+                  </div>
+              </div>
+  
+              <div class="swiper-slide box">
+                  <img src="image/car-7.png" alt="">
+                  <div class="content">
+                      <h3>KIA Sorento</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="price">$75,000/-</div>
+                      <a href="./chitiet3.html" class="btn">check out</a>
+                  </div>
+              </div>
+  
+              <div class="swiper-slide box">
+                  <img src="image/car-8.png" alt="">
+                  <div class="content">
+                      <h3>Chevrolet Captiva</h3>
+                      <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <div class="price">$50,000/-</div>
+                      <a href="./chitiet3.html" class="btn">check out</a>
+                  </div>
+              </div>
+  
+         </div>
+  
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+     <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="image/vehicle-1.png" alt="">
+                 <div class="content">
+                     <h3>Ferrari SF90 Stradale</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$600,000/-</div>
+                     <a href="./chitiet1.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/vehicle-2.png" alt="">
+                 <div class="content">
+                     <h3>Ferrari 812 GTS</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$364,000/-</div>
+                     <a href="./chitiet1.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/vehicle-3.png" alt="">
+                 <div class="content">
+                     <h3>Ferrari 488GTB</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$257,000/-</div>
+                     <a href="./chitiet1.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+     <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="image/vehicle-4.png" alt="">
+                 <div class="content">
+                     <h3>Ferrari F12 Berlinetta</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$324,000/-</div>
+                     <a href="./chitiet1.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/vehicle-5.png" alt="">
+                 <div class="content">
+                     <h3>Ferrari Portofino</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$240,000/-</div>
+                     <a href="./chitiet1.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/vehicle-6.png" alt="">
+                 <div class="content">
+                     <h3>Ferrari GTC4Lusso</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                     </div>
+                     <div class="price">$303,000/-</div>
+                     <a href="./chitiet1.html" class="btn">check out</a>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+
+</section>
+
+
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> vehicles </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> ducnhan055@gmail.com </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="https://github.com/ducnhancr21"> <i class="fab fa-github"></i> github </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by Hồ Đức Nhân | MSSV: 20117051 </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

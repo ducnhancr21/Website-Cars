@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .small-container{
+            max-width: 1000;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 20px;
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .single-product{
+            margin-top: 80px;
+        }
+        .small-img-row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .col-2 img{
+            max-width: 100%;
+            padding: 50px 0;
+        }
+        .small-img-col{
+            flex-basis: 24%;
+            cursor: pointer;
+        }
+        .single-product .col-2 img{
+            padding: 0;
+        }
+        .single-product .col-2{
+            padding: 20px;
+        }
+        .col-2{
+            flex-basis: 50%;
+            min-width: 300px;
+        }
+        .col-2 h1{
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+        .single-product select{
+            display: block;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .single-product h4{
+            margin: 20px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .single-product h3{
+            margin: 20px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .single-product input{
+            width: 50px;
+            height: 40px;
+            padding-left: 10px;
+            font-size: 20px;
+            margin-right: 10px;
+            border: 1px solid #ff5;
+        }
+        input:focus{
+            outline: none;
+        }
+        a{
+            text-decoration: none;
+            color: #555;
+        }
+        .single-product .fa{
+            color: #f9d806;
+            margin-left: 10px;
+        }
+        p{
+            font-size: 15px;
+            color: #555;
+        }
+        .btt{
+            display: inline-block;
+            background: #ffee80;
+            color: #130f40;
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+            transition: background 0.5s;
+        }
+        .btt:hover{
+            background: #f9d806;
+        }
+    </style>
+
+</head>
+<body>
+    
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a href="./index.html" class="logo"> <span>max</span>wheels </a>
+
+    <nav class="navbar">
+        <a href="./index.html">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">featured</a>
+        <a href="#contact">contact</a>
+        <a href="./gioithieu.html">Introduce</a>
+        <a href="./sitemap.html">SiteMap</a>
+    </nav>
+
+    <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div id="login-btn">
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header> 
+
+
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="/image/car-1.png" width="100%" id="ProductImg" alt="">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="/image/car-1.png" width="100%" class="small-img" alt="">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="/image/car-2.png" width="100%" class="small-img" alt="">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="/image/car-3.png" width="100%" class="small-img" alt="">
+                </div>
+
+                <div class="small-img-col">
+                    <img src="/image/car-4.png" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <p>Home / Featured</p>
+            <h1>Mercedes / Audi / MG</h1>
+            <h4>$55,000 - $100,000</h4>
+            <input type="number" value="1" name="" id="">
+            <a href="./shoppingcart.html" class="btt">Add to Cart</a>
+            <h3>Product Details <i class="fa fa-indent"></i></h3>
+            <br>
+            <p>The Mercedes-AMG A-Class models represent an ideal point of entry to the world of Mercedes-AMG as well as absolute peak performance.</p>
+        </div>
+    </div>
+</div>
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> vehicles </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> ducnhan055@gmail.com </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="https://github.com/ducnhancr21"> <i class="fab fa-github"></i> github </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> created by Hồ Đức Nhân | MSSV: 20117051 </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+<script>
+          var ProductImg = document.getElementById("ProductImg");
+      var SmallImg = document.getElementsByClassName("small-img");
+
+      SmallImg[0].onclick = function(){
+        ProductImg.src = SmallImg[0].src;
+      }
+      SmallImg[1].onclick = function(){
+        ProductImg.src = SmallImg[1].src;
+      }
+      SmallImg[2].onclick = function(){
+        ProductImg.src = SmallImg[2].src;
+      }
+      SmallImg[3].onclick = function(){
+        ProductImg.src = SmallImg[3].src;
+      }
+      SmallImg[4].onclick = function(){
+        ProductImg.src = SmallImg[4].src;
+      }
+      SmallImg[5].onclick = function(){
+        ProductImg.src = SmallImg[5].src;
+      }
+</script>
+
+</body>
+</html>
